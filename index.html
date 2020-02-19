@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data finder with message</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+	<h2>Newton</h2>
+	<h2>Rima</h2>
+	<h2>Sarkar</h2>
+	<h2>Utsha</h2>
+	<h2>Das</h2>
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script>
+		
+		$('h2').click(function(){
+			let name = $(this).html();
+
+			let maleorfemale;
+
+			if(name == 'Newton' || name == 'Utsha'){
+				maleorfemale= ' male';
+			}
+			else{
+				maleorfemale=' female';
+
+			}
+
+			if(name == "Rima" || name == 'Das' || name == 'Sarkar'){
+				$(this).append( ' <span style="color:red;">YES ' +name + maleorfemale +'</span>')
+			}
+			else{
+				$(this).append( ' <span style="color:blue;">NO ' +name + maleorfemale +'</span>')
+			}
+		});
+
+	</script>
+</body>
+</html>
